@@ -62,6 +62,11 @@
     .color-stage-adjustments { background-color: #BA4300; }
     .color-stage-finalization { background-color: #1C7500; }
 
+footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #FFD700;
+        }
 
 </style>
 </head>
@@ -102,165 +107,216 @@
 <br> 
 <br> 
     <!-- Departments Section -->
-    <h2 class="section-title">Departments</h2>
-    
-    <div class="department" id="Marketing">
-        <h3>Marketing and Communications</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'MarketingProgress', 'Marketing')">
-        <div class="progress-bar">
-            <div id="MarketingProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="HR">
-        <h3>Human Resources</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HRProgress', 'HR')">
-        <div class="progress-bar">
-            <div id="HRProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="Finance">
-        <h3>Finance and Accounting</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FinanceProgress', 'Finance')">
-        <div class="progress-bar">
-            <div id="FinanceProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="Logistics">
-        <h3>Logistics and Warehouse</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LogisticsProgress', 'Logistics')">
-        <div class="progress-bar">
-            <div id="LogisticsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="Operations">
-        <h3>Operations Management</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'OperationsProgress', 'Operations')">
-        <div class="progress-bar">
-            <div id="OperationsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="IT">
-        <h3>Information Technology</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ITProgress', 'IT')">
-        <div class="progress-bar">
-            <div id="ITProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="Legal">
-        <h3>Legal and Compliance</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LegalProgress', 'Legal')">
-        <div class="progress-bar">
-            <div id="LegalProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="PR">
-        <h3>Public Relations</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'PRProgress', 'PR')">
-        <div class="progress-bar">
-            <div id="PRProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="Audit">
-        <h3>Internal Audit</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'AuditProgress', 'Audit')">
-        <div class="progress-bar">
-            <div id="AuditProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="BusinessDevelopment">
-        <h3>Business Development</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'BusinessDevelopmentProgress', 'BusinessDevelopment')">
-        <div class="progress-bar">
-            <div id="BusinessDevelopmentProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
-    <div class="department" id="CSR">
-        <h3>Corporate Social Responsibility</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CSRProgress', 'CSR')">
-        <div class="progress-bar">
-            <div id="CSRProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
-    </div>
+<h2 class="section-title">Departments</h2>
 
-    <!-- Divisions Section -->
-    <h2 class="section-title">Divisions</h2>
-    <div class="department" id="Cooperate">
-        <h3>Tringledo Cooperate</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CooperateProgress', 'Cooperate')">
-        <div class="progress-bar">
-            <div id="CooperateProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+<div class="department" id="Marketing">
+    <h3>Marketing and Communications</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'MarketingProgress', 'Marketing')">
+    <div class="progress-bar">
+        <div id="MarketingProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="Developments">
-        <h3>Tringledo Developments</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'DevelopmentsProgress', 'Developments')">
-        <div class="progress-bar">
-            <div id="DevelopmentsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('Marketing', 'MarketingProgress')">Edit Progress</button>
+</div>
+<div class="department" id="HR">
+    <h3>Human Resources</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HRProgress', 'HR')">
+    <div class="progress-bar">
+        <div id="HRProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="CreativeStudio">
-        <h3>Tringledo Creative Studio (TCS)</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CreativeStudioProgress', 'CreativeStudio')">
-        <div class="progress-bar">
-            <div id="CreativeStudioProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('HR', 'HRProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Finance">
+    <h3>Finance and Accounting</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FinanceProgress', 'Finance')">
+    <div class="progress-bar">
+        <div id="FinanceProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="LearningCurve">
-        <h3>Tringledo Learning Curve (TLC)</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LearningCurveProgress', 'LearningCurve')">
-        <div class="progress-bar">
-            <div id="LearningCurveProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('Finance', 'FinanceProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Logistics">
+    <h3>Logistics and Warehouse</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LogisticsProgress', 'Logistics')">
+    <div class="progress-bar">
+        <div id="LogisticsProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="Starlight">
-        <h3>Tringledo Starlight</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'StarlightProgress', 'Starlight')">
-        <div class="progress-bar">
-            <div id="StarlightProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('Logistics', 'LogisticsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Operations">
+    <h3>Operations Management</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'OperationsProgress', 'Operations')">
+    <div class="progress-bar">
+        <div id="OperationsProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="ResearchLabs">
-        <h3>Tringledo Research Labs (TRL)</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ResearchLabsProgress', 'ResearchLabs')">
-        <div class="progress-bar">
-            <div id="ResearchLabsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('Operations', 'OperationsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="IT">
+    <h3>Information Technology</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ITProgress', 'IT')">
+    <div class="progress-bar">
+        <div id="ITProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="Fabrics">
-        <h3>Tringledo Fabrics</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FabricsProgress', 'Fabrics')">
-        <div class="progress-bar">
-            <div id="FabricsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('IT', 'ITProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Legal">
+    <h3>Legal and Compliance</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LegalProgress', 'Legal')">
+    <div class="progress-bar">
+        <div id="LegalProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="News">
-        <h3>Tringledo News</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'NewsProgress', 'News')">
-        <div class="progress-bar">
-            <div id="NewsProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('Legal', 'LegalProgress')">Edit Progress</button>
+</div>
+<div class="department" id="PR">
+    <h3>Public Relations</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'PRProgress', 'PR')">
+    <div class="progress-bar">
+        <div id="PRProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-    <div class="department" id="HealthCare">
-        <h3>Tringledo Health Care Center (THCC)</h3>
-        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HealthCareProgress', 'HealthCare')">
-        <div class="progress-bar">
-            <div id="HealthCareProgress" class="progress" style="width: 0%;">0%</div>
-        </div>
+    <button onclick="allowEditProgress('PR', 'PRProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Audit">
+    <h3>Internal Audit</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'AuditProgress', 'Audit')">
+    <div class="progress-bar">
+        <div id="AuditProgress" class="progress" style="width: 0%;">0%</div>
     </div>
-
+    <button onclick="allowEditProgress('Audit', 'AuditProgress')">Edit Progress</button>
+</div>
+<div class="department" id="BusinessDevelopment">
+    <h3>Business Development</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'BusinessDevelopmentProgress', 'BusinessDevelopment')">
+    <div class="progress-bar">
+        <div id="BusinessDevelopmentProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('BusinessDevelopment', 'BusinessDevelopmentProgress')">Edit Progress</button>
+</div>
+<div class="department" id="CSR">
+    <h3>Corporate Social Responsibility</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CSRProgress', 'CSR')">
+    <div class="progress-bar">
+        <div id="CSRProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('CSR', 'CSRProgress')">Edit Progress</button>
 </div>
 
+<!-- Divisions Section -->
+<h2 class="section-title">Divisions</h2>
+<div class="department" id="Cooperate">
+    <h3>Tringledo Cooperate</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CooperateProgress', 'Cooperate')">
+    <div class="progress-bar">
+        <div id="CooperateProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('Cooperate', 'CooperateProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Developments">
+    <h3>Tringledo Developments</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'DevelopmentsProgress', 'Developments')">
+    <div class="progress-bar">
+        <div id="DevelopmentsProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('Developments', 'DevelopmentsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="CreativeStudio">
+    <h3>Tringledo Creative Studio (TCS)</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CreativeStudioProgress', 'CreativeStudio')">
+    <div class="progress-bar">
+        <div id="CreativeStudioProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('CreativeStudio', 'CreativeStudioProgress')">Edit Progress</button>
+</div>
+<div class="department" id="LearningCurve">
+    <h3>Tringledo Learning Curve (TLC)</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LearningCurveProgress', 'LearningCurve')">
+    <div class="progress-bar">
+        <div id="LearningCurveProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('LearningCurve', 'LearningCurveProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Starlight">
+    <h3>Tringledo Starlight</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'StarlightProgress', 'Starlight')">
+    <div class="progress-bar">
+        <div id="StarlightProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('Starlight', 'StarlightProgress')">Edit Progress</button>
+</div>
+<div class="department" id="ResearchLabs">
+    <h3>Tringledo Research Labs (TRL)</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ResearchLabsProgress', 'ResearchLabs')">
+    <div class="progress-bar">
+        <div id="ResearchLabsProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('ResearchLabs', 'ResearchLabsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="Fabrics">
+    <h3>Tringledo Fabrics</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FabricsProgress', 'Fabrics')">
+    <div class="progress-bar">
+        <div id="FabricsProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('Fabrics', 'FabricsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="News">
+    <h3>Tringledo News</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'NewsProgress', 'News')">
+    <div class="progress-bar">
+        <div id="NewsProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('News', 'NewsProgress')">Edit Progress</button>
+</div>
+<div class="department" id="HealthCare">
+    <h3>Tringledo Health Care Center (THCC)</h3>
+    <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HealthCareProgress', 'HealthCare')">
+    <div class="progress-bar">
+        <div id="HealthCareProgress" class="progress" style="width: 0%;">0%</div>
+    </div>
+    <button onclick="allowEditProgress('HealthCare', 'HealthCareProgress')">Edit Progress</button>
+</div>
+
+<footer>
+    <button onclick="enableAllProgress()">Enable All Progress</button>
+</footer>
+
 <script>
- // Password protection
-    document.addEventListener("DOMContentLoaded", function() {
-        const password = "Ponnaya"; // Set your password here
-        let userInput = prompt("Please enter the password:");
-        
-        if (userInput !== password) {
-            alert("Incorrect password. Access denied.");
-            document.body.innerHTML = ""; // Clear the page content if password is incorrect
-        }
-    });
+ // Set the password for each department
+const departmentPasswords = {
+	"Marketing": "d4T8b2",
+	"HR": "F9h7Gk",
+	"Finance": "M5z2Pq",
+	"Logistics": "X7vY6t",
+	"Operations": "R4p9Wn",
+	"IT": "T5w3Fc",
+	"Legal": "Q8k1Jz",
+	"PR": "L0p9Vx",
+	"Audit": "W2n8Qe",
+	"BusinessDevelopment": "V6zT1J",
+	"CSR": "H9j0B3",
+	"Cooperate": "A1o9Tm",
+	"Developments": "D4f3Pz",
+	"CreativeStudio": "S2bQ7M",
+	"LearningCurve": "C8vL1W",
+	"Starlight": "X5n0Jz",
+	"ResearchLabs": "B4l8Hk",
+	"Fabrics": "F3o9Wm",
+	"News": "J7dV5r",
+	"HealthCare": "K0cL6P"
+
+};
+
+// Function to allow editing progress
+function allowEditProgress(departmentId, progressId, departmentPassword) {
+    let userInput = prompt("Please enter the password to edit:");
+
+    // Check if the password matches for the specific department
+    if (userInput === departmentPasswords[departmentId]) {
+        // Enable editing (show the slider)
+        let slider = document.getElementById(departmentId).querySelector('.slider');
+        slider.disabled = false; // Enable slider
+        alert("You can now edit the progress.");
+    } else {
+        alert("Incorrect password. Editing denied.");
+    }
+}
 
 // Function to update progress bar and store value in local storage
 function updateProgress(slider, progressId, departmentId) {
@@ -290,9 +346,27 @@ function updateProgress(slider, progressId, departmentId) {
     }
 }
 
-// Load saved progress values on page load
+// Function to enable all progress bars with master key
+function enableAllProgress() {
+    const masterKey = prompt("Enter the master key:");
+
+    // Set your master key
+    const correctMasterKey = "master123"; // Change this to your actual master key
+
+    if (masterKey === correctMasterKey) {
+        document.querySelectorAll(".slider").forEach(slider => {
+            slider.disabled = false; // Enable all sliders
+        });
+        alert("All progress bars are now editable.");
+    } else {
+        alert("Incorrect master key.");
+    }
+}
+
+// Disable sliders initially
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".slider").forEach(slider => {
+        slider.disabled = true; // Disable sliders on page load
         let departmentId = slider.parentElement.id;
         let savedValue = localStorage.getItem(departmentId);
         if (savedValue !== null) {
@@ -301,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 </script>
 
 </body>
