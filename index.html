@@ -16,13 +16,91 @@
     .progress-bar { width: 100%; height: 30px; background-color: #ddd; border-radius: 5px; overflow: hidden; }
     .progress { height: 100%; text-align: center; color: white; line-height: 30px; }
     .slider { width: 100%; }
+
+
+/* Style for the color stages with rounded corners */
+    .color-stage-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .color-stage {
+        width: 100px;
+        height: 40px;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.3s;
+    }
+
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .color-stage:hover .tooltip {
+        visibility: visible;
+    }
+
+    /* Tooltip color mappings */
+    .color-stage-concept { background-color: #545454; }
+    .color-stage-planning { background-color: #008FB9; }
+    .color-stage-development { background-color: #007C66; }
+    .color-stage-structure { background-color: #8B6B03; }
+    .color-stage-adjustments { background-color: #BA4300; }
+    .color-stage-finalization { background-color: #1C7500; }
+
+
 </style>
 </head>
 <body>
 
+
 <div class="container">
     <h1>Department and Division Progress Tracker</h1>
-
+<br> 
+<br> 
+<div class="color-stage-container">
+        <div class="color-stage color-stage-concept">
+            Concept Stage
+            <div class="tooltip">Initial brainstorming and idea generation.</div>
+        </div>
+        <div class="color-stage color-stage-planning">
+            Planning Stage
+            <div class="tooltip">Detailed planning and resource allocation.</div>
+        </div>
+        <div class="color-stage color-stage-development">
+            Initial Development
+            <div class="tooltip">Starting development of key components.</div>
+        </div>
+        <div class="color-stage color-stage-structure">
+            Core Structure
+            <div class="tooltip">Building and structuring the main framework.</div>
+        </div>
+        <div class="color-stage color-stage-adjustments">
+            Final Adjustments
+            <div class="tooltip">Last tweaks and alignment.</div>
+        </div>
+        <div class="color-stage color-stage-finalization">
+            Finalised To The Public
+            <div class="tooltip">Completing and final review before launch.</div>
+        </div>
+    </div>
+<br> 
+<br> 
+<br> 
     <!-- Departments Section -->
     <h2 class="section-title">Departments</h2>
     
