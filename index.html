@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department and Division Progress Tracker</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        background-color: #000; 
+        color: white;
+    }
+    .container { max-width: 800px; margin: 20px auto; }
+    .section-title { font-size: 1.5em; margin-top: 30px; color: #FFD700; }
+    .department { margin-bottom: 20px; }
+    .progress-bar { width: 100%; height: 30px; background-color: #ddd; border-radius: 5px; overflow: hidden; }
+    .progress { height: 100%; text-align: center; color: white; line-height: 30px; }
+    .slider { width: 100%; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Department and Division Progress Tracker</h1>
+
+    <!-- Departments Section -->
+    <h2 class="section-title">Departments</h2>
+    
+    <div class="department" id="Marketing">
+        <h3>Marketing and Communications</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'MarketingProgress', 'Marketing')">
+        <div class="progress-bar">
+            <div id="MarketingProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="HR">
+        <h3>Human Resources</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HRProgress', 'HR')">
+        <div class="progress-bar">
+            <div id="HRProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Finance">
+        <h3>Finance and Accounting</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FinanceProgress', 'Finance')">
+        <div class="progress-bar">
+            <div id="FinanceProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Logistics">
+        <h3>Logistics and Warehouse</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LogisticsProgress', 'Logistics')">
+        <div class="progress-bar">
+            <div id="LogisticsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Operations">
+        <h3>Operations Management</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'OperationsProgress', 'Operations')">
+        <div class="progress-bar">
+            <div id="OperationsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="IT">
+        <h3>Information Technology</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ITProgress', 'IT')">
+        <div class="progress-bar">
+            <div id="ITProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Legal">
+        <h3>Legal and Compliance</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LegalProgress', 'Legal')">
+        <div class="progress-bar">
+            <div id="LegalProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="PR">
+        <h3>Public Relations</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'PRProgress', 'PR')">
+        <div class="progress-bar">
+            <div id="PRProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Audit">
+        <h3>Internal Audit</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'AuditProgress', 'Audit')">
+        <div class="progress-bar">
+            <div id="AuditProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="BusinessDevelopment">
+        <h3>Business Development</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'BusinessDevelopmentProgress', 'BusinessDevelopment')">
+        <div class="progress-bar">
+            <div id="BusinessDevelopmentProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="CSR">
+        <h3>Corporate Social Responsibility</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CSRProgress', 'CSR')">
+        <div class="progress-bar">
+            <div id="CSRProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+
+    <!-- Divisions Section -->
+    <h2 class="section-title">Divisions</h2>
+    <div class="department" id="Cooperate">
+        <h3>Tringledo Cooperate</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CooperateProgress', 'Cooperate')">
+        <div class="progress-bar">
+            <div id="CooperateProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Developments">
+        <h3>Tringledo Developments</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'DevelopmentsProgress', 'Developments')">
+        <div class="progress-bar">
+            <div id="DevelopmentsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="CreativeStudio">
+        <h3>Tringledo Creative Studio (TCS)</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'CreativeStudioProgress', 'CreativeStudio')">
+        <div class="progress-bar">
+            <div id="CreativeStudioProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="LearningCurve">
+        <h3>Tringledo Learning Curve (TLC)</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'LearningCurveProgress', 'LearningCurve')">
+        <div class="progress-bar">
+            <div id="LearningCurveProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Starlight">
+        <h3>Tringledo Starlight</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'StarlightProgress', 'Starlight')">
+        <div class="progress-bar">
+            <div id="StarlightProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="ResearchLabs">
+        <h3>Tringledo Research Labs (TRL)</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'ResearchLabsProgress', 'ResearchLabs')">
+        <div class="progress-bar">
+            <div id="ResearchLabsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="Fabrics">
+        <h3>Tringledo Fabrics</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'FabricsProgress', 'Fabrics')">
+        <div class="progress-bar">
+            <div id="FabricsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="News">
+        <h3>Tringledo News</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'NewsProgress', 'News')">
+        <div class="progress-bar">
+            <div id="NewsProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+    <div class="department" id="HealthCare">
+        <h3>Tringledo Health Care Center (THCC)</h3>
+        <input type="range" min="0" max="100" value="0" class="slider" oninput="updateProgress(this, 'HealthCareProgress', 'HealthCare')">
+        <div class="progress-bar">
+            <div id="HealthCareProgress" class="progress" style="width: 0%;">0%</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+ // Password protection
+    document.addEventListener("DOMContentLoaded", function() {
+        const password = "Ponnaya"; // Set your password here
+        let userInput = prompt("Please enter the password:");
+        
+        if (userInput !== password) {
+            alert("Incorrect password. Access denied.");
+            document.body.innerHTML = ""; // Clear the page content if password is incorrect
+        }
+    });
+
+// Function to update progress bar and store value in local storage
+function updateProgress(slider, progressId, departmentId) {
+    let progressValue = slider.value;
+    let progressElement = document.getElementById(progressId);
+    
+    // Update progress bar width and text
+    progressElement.style.width = progressValue + "%";
+    progressElement.textContent = progressValue + "%";
+
+    // Store the progress value in localStorage
+    localStorage.setItem(departmentId, progressValue);
+    
+    // Update color based on progress percentage
+    if (progressValue <= 20) {
+        progressElement.style.backgroundColor = "#545454"; // Gray
+    } else if (progressValue <= 40) {
+        progressElement.style.backgroundColor = "#008FB9"; // Blue
+    } else if (progressValue <= 60) {
+        progressElement.style.backgroundColor = "#007C66"; // Teal
+    } else if (progressValue <= 80) {
+        progressElement.style.backgroundColor = "#8B6B03"; // Gold
+    } else if (progressValue <= 90) {
+        progressElement.style.backgroundColor = "#BA4300"; // Orange
+    } else {
+        progressElement.style.backgroundColor = "#1C7500"; // Green
+    }
+}
+
+// Load saved progress values on page load
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".slider").forEach(slider => {
+        let departmentId = slider.parentElement.id;
+        let savedValue = localStorage.getItem(departmentId);
+        if (savedValue !== null) {
+            slider.value = savedValue;
+            updateProgress(slider, departmentId + "Progress", departmentId);
+        }
+    });
+});
+</script>
+
+</body>
+</html>
